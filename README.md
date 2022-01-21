@@ -52,22 +52,22 @@ $ cd /var/www/html/senpa/s/cnf
 $ cp -vR config-default.php config.php
 
 $ cat config.php
-<?php
-return array (
-  'dbtype' => 'pgsql',
-  'dbhost' => 'localhost',
-  'dbport' => '5432',
-  'dbname' => 'senpa',
-  'dbuser' => 'senpa',
-  'dbpass' => 'senpa',
-  'login' => '12345678',
-  'rootURL' => 'http://localhost/senpa/',
-  'mailserver' => 'ssl://smtp.gmail.com',
-  'mailport' => '465',
-  'mailuser' => '',
-  'mailpass' => '',
-  'mailsender' => '',
-)
-?>
+<?php<br>
+return array (<br>
+  'dbtype' => 'pgsql',<br>
+  'dbhost' => 'localhost',<br>
+  'dbport' => '5432',<br>
+  'dbname' => 'senpa',<br>
+  'dbuser' => 'senpa',<br>
+  'dbpass' => 'senpa',<br>
+  'login' => '12345678',<br>
+  'rootURL' => 'http://localhost/senpa/',<br>
+  'mailserver' => 'ssl://smtp.gmail.com',<br>
+  'mailport' => '465',<br>
+  'mailuser' => '',<br>
+  'mailpass' => '',<br>
+  'mailsender' => '',<br>
+)<br>
+?><br>
 
 $ EDIT config.php
