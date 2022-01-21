@@ -1,0 +1,60 @@
+
+INSTALL:
+sudo pear install --alldeps Mail-1.4.1
+sudo apt install php7.2-gd
+sudo apt install php7.2-mbstring
+sudo apt install php7.2-mysql
+/usr/share/php/Mail.php
+
+NOTE:
+mysql> ALTER TABLE passwd ADD COLUMN totp_lengh INT(2) NOT NULL AFTER totp_time;
+mysql> ALTER TABLE passwd DROP COLUMN totp_time;
+mysql> ALTER TABLE passwd ADD COLUMN totp_lengh INT(2) AFTER totp_time;
+
+POSTGRESQL:
+
+$ psql -h localhost -d postgres -U senpa -f /var/www/html/senpa/setup/postgresql.sql
+
+TODO
+
+1) Menu
+  1.1 New Entry           (done)
+  1.2 New Bank/Card
+  1.3 New Note
+  1.4 New Reminder
+
+2) Policy & privacy notice
+
+3) Personal encrypted key (16 characters)
+  3.1 Implement on create account
+  3.2 Use on overview
+  3.3 use on filter
+  3.4 use on update
+  3.5 display on profile
+
+4) License
+  4.1 Create table in database license
+    4.2.1 license_id,
+    4.1.2 user_id,
+    4.1.3 type,         (A = never expire), (B = 60 months), (C = 12 months), (D = 30 days), (E = 12 months NEW user)
+    4.1.4 updated,
+    4.1.5 status
+
+5) Account activation
+  5.1 creating new user
+    5.1.1 create full account with (user_id, user_name,user_pass,user_status(new),user_lang,user_key(16 char),created)
+    5.1.2 Send email with 16 digit link + email + user_name
+    5.1.3 create script receive link set user_status = "active";
+
+6) Modify user login
+  6.1 User id & credential = ok
+    6.1.1 If user_status = new ($error = Your account has not been activated check email or re-send activation email)
+    6.1.2 If user_status = active
+      6.1.2.1 If user_license status = active (login)
+      6.1.2.2 If user_license status = suspended ($error = Your license has expired) (login with NO key(16 character - logins won't decrypt))
+    6.2.1 If user_status = locked ($error = contact administrator)
+    6.2.2 if user_status = sleep ($error = Your account is currently suspended for X time due to too many incorrect passwords)
+
+7) Personal encryption user_key
+  7.1 remove $hashKey
+  7.2 create 16 character key and store in user profile (admins)

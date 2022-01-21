@@ -1,0 +1,397 @@
+@charset "UTF-8";
+
+###############################################
+
+#dialogoverlay{
+	display: none;
+	opacity: .8;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #FFF;
+	width: 100%;
+	z-index: 10;
+}
+#dialogbox{
+	display: none;
+	position: fixed;
+	background: #666;
+	border-radius:7px;
+	width:550px;
+	z-index: 10;
+}
+#dialogbox > div { background:#FFF; margin:8px; }
+#dialogbox > div > #dialogboxhead{ background: #FFF; font-size:19px; padding:10px; color:#666; }
+#dialogbox > div > #dialogboxbody{ background:#333; margin-left: 6%; width: 80%; padding:20px; color:#FFF; }
+#dialogbox > div > #dialogboxfoot{ background: #FFF; padding:10px; text-align:center; }
+
+###############################################
+
+article, aside, footer, header, main, nav, section {
+        display: block;
+}
+
+
+html body, h1, h2, h3, ul, li, ol, a, p, article, aside, footer, header, main, nav, section {
+  padding: 0;
+  margin:0 auto;
+}
+
+input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    outline: none;
+}
+
+table {
+	table-layout:fixed;
+	overflow:hidden;
+	width: 100%;
+}
+
+th, tr, td {
+	border: 1px solid black;
+	resize:horizontal;
+}
+
+td.png{
+  border: 0px;
+	text-align: center;
+}
+
+td.return{
+  border: 0px;
+	text-align: center;
+	background-color: white;
+	width: 80%;
+}
+
+td.showpass {
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+.noBorder {
+  border: none;
+}
+label.user {
+	background-color: #11233b;
+	color: white;
+	padding: 5px 20px;
+	border: 2px solid #ccc;
+}
+
+.banner {
+  background-color: #11233b;
+  color: white;
+  padding: 10px 20px;
+	width: 90%;
+}
+
+.li2 li {
+  display:list-item;
+  list-style-type:square;
+  margin-left: 15px;
+  float:left;
+}
+
+.li2 a {
+ color: black;
+}
+
+li a {
+  color: white;
+}
+
+li {
+  display: inline;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 20px;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+.li:hover, .li:focus {
+		font-size: 20px;
+		font-variant: small-caps;
+		font-weight: bold;
+    background-color: transparent;
+		border-bottom: 1px solid white;
+}
+
+section {
+  background-color: #bbbbbb;
+  margin-top: 10px;
+  padding: 5px;
+	width: 92%;
+}
+
+article {
+  background-color: white;
+  margin-top: 5px;
+  padding: 10px 10px;
+	text-align: center;
+	width: 91%;
+}
+
+main {
+  width: 800px;
+  float: center;
+  margin-bottom: 10px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+aside {
+  background-color: #bbbbbb;
+  width: 170px;
+  float: right;
+  padding: 5px;
+  margin-top: 10px;
+  top: 0px;
+  bottom: 0px;
+}
+header {
+	width: 58%;
+}
+footer {
+  clear: both;
+  background-color: #20416c;
+  color: white;
+  padding: 5px 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 90%;
+}
+
+body{
+        display: table;
+				width:80%;
+				margin-left:auto;
+				margin-right:auto;
+        background:#0040FF;
+        background: -webkit-radial-gradient(#99b3ff, #3366ff, #001a66); /* Safari 5.1 to 6.0 */
+        background: -o-radial-gradient(#ccccff, #3366ff, #001a66); /* For Opera 11.6 to 12.0 */
+        background: -moz-radial-gradient(#ccccff, #3366ff, #001a66); /* For Firefox 3.6 to 15 */
+        background: radial-gradient(#ccccff, #3366ff, #001a66); /* Standard syntax */
+        text-align: center;
+        margin: 10px auto !important;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text], input[type=password], input[type=date] {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#wgtmsr{
+ width:80%;
+ text-align: center;
+
+}
+
+#wgtmsr option{
+  width:80%;
+  text-align: center;
+}
+
+button {
+    background-color: #11233b;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    border-radius: 90%;
+}
+
+button.senha {
+    background-color: white;
+    color: black;
+    padding: 0px 0px;
+    margin:0 auto;
+    width: 100%;
+}
+
+button.delete {
+    background-color: red;
+    color: black;
+    padding: 0px 0px;
+    margin:0 auto;
+    width: 80%;
+}
+
+
+button:hover {
+    opacity: 0.5;
+    border-radius: 90%;
+}
+
+.round-button {
+	width:100%;
+}
+.round-button-circle {
+	width: 100%;
+	height:0;
+	padding-bottom: 100%;
+    	border-radius: 50%;
+	border:10px solid #cfdcec;
+    	overflow:hidden;
+
+    	background: #4679BD;
+    	box-shadow: 0 0 3px gray;
+}
+.round-button-circle-off {
+	width: 100%;
+	height:0;
+	padding-bottom: 100%;
+    	border-radius: 50%;
+	border:10px solid #cfdcec;
+    	overflow:hidden;
+
+    	background: purple;
+    	box-shadow: 0 0 3px gray;
+}
+
+.round-button-circle-off:hover {
+	background:red;
+}
+.round-button-circle:hover {
+	background:blue;
+}
+.round-button a {
+    	display:block;
+	float:center;
+	width:100%;
+	padding-top:50%;
+    	padding-bottom:50%;
+	line-height:1em;
+	margin-top:-0.5em;
+
+	text-align:center;
+	color:#e2eaf3;
+    	font-family:Verdana;
+    	font-size:1.2em;
+    	font-weight:bold;
+    	text-decoration:none;
+}
+
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.imgcontainer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+img.avatar {
+    width: 256px;
+    height: 256px;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+		text-align: center;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   text-align: center;
+}
+
+u {
+    text-decoration: underline;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 5px solid #ccc;
+  box-sizing: border-box;
+  font-family:Verdana;
+  font-size:1.1em;
+  text-decoration:none;
+  white-space:pre-wrap
+}
+
+.dropbtn {
+    border: none;
+    cursor: pointer;
+    color: black;
+    padding: 0px 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+
+    display: inline;
+    margin-left: 10px;
+    margin-right: 35px;
+    font-size: 20px;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: transparent;
+		text-decoration: underline;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd}
+
+.show {display:block;}
