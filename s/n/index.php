@@ -7,7 +7,13 @@ session_start();
 require_once(__DIR__ . '/../cnf/class.user.php');
 $user = new SENPA();
 
+$filename = '../cnf/config.php';
 
+if (!file_exists($filename)) {
+	echo "<BR><BR>#######################################<BR>";
+    		echo "The file $filename is MISSING<BR>";
+	echo "#######################################<BR>";
+} 
 
 if (!isset($_SESSION['user_lang'])){
 	$LANG = 'en';
